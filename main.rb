@@ -3,4 +3,4 @@ require './player'
 require './question'
 require './turn'
 
-# MathGame::Game
+Game.new.start

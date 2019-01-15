@@ -1,20 +1,12 @@
-module MathGame
-
 class Player 
-  attr_reader :name, :lives
-
-  def initialize(name, lives)
+  attr_accessor :name, :lives
+  
+  def initialize(name)
     @name = name
-    @lives = lives
+    @lives = 3
   end
 
-  def fullstats 
-    "#{@name} #{@lives}"
-  end
-
-  def self.create(name, lives)
-    user = Player.new(name, lives)
-    @@users << user
-    user
+  def taken_lives
+    @lives -= 1
   end
 end
